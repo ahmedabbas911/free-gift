@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احصل على هديتك المجانية</title>
+    <style>
+        body {
+            background: url('pngtree-festive-gifts-wrapped-on-the-shelves-of-a-shop-image_2532700.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            flex-direction: column;
+            transition: background 1s ease-in-out;
+        }
+        .hidden-message {
+            display: none;
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+            animation: fadeIn 3s ease-in-out forwards, glitch 1s infinite;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px blue; }
+            100% { text-shadow: 2px 2px green; }
+        }
+        button {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ffaa00;
+        }
+    </style>
+    <script>
+        function prankEffect() {
+            document.body.style.background = 'black';
+            document.body.innerHTML = '<h1 class="hidden-message">🚨 تم الاختراق بنجاح 🚨</h1>';
+            document.querySelector('.hidden-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>🎁 احصل على هدية مجانية بمناسبة العروض الخاصة! 🎁</h1>
+    <p>اضغط على الزر أدناه لمعرفة هديتك!</p>
+    <button id="button" onclick="prankEffect()">احصل على هديتك الآن</button>
+</body>
+</html>
